@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 3f5cf6178b3e5e041932b7b2fd996b03: 630302521
+    - 3f5cf6178b3e5e041932b7b2fd996b03: 759067952
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -981657895
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -524951136
+    - 3f5cf6178b3e5e041932b7b2fd996b03: 806849141
+    - 3f5cf6178b3e5e041932b7b2fd996b03: 120108332
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -1616939271
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -1103718106
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -1089588216
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -427705931
+    - 3f5cf6178b3e5e041932b7b2fd996b03: -379628329
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 630302521, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: 759067952, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -981657895, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -524951136, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: 806849141, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: 120108332, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -1616939271, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -1103718106, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -1089588216, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -427705931, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  - {fileID: -379628329, guid: 3f5cf6178b3e5e041932b7b2fd996b03, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - player_spritesheet_10
+  - player_spritesheet_8
+  - player_spritesheet_9
+  - player_spritesheet_0
+  - player_spritesheet_1
+  - player_spritesheet_2
+  - player_spritesheet_3
+  - player_spritesheet_4
+  - player_spritesheet_5
+  - player_spritesheet_6
+  - player_spritesheet_7
+  m_RenderDataMap: {}
+  m_Tag: PlayerAtlas
+  m_IsVariant: 0
