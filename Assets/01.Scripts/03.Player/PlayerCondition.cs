@@ -57,6 +57,7 @@ public class PlayerCondition : MonoBehaviour
         {
             _player.PlayerConditionUI.UpdateExpBar(_exp.Value);
             _player.PlayerConditionUI.UpdateHpBar(_hp.Value / _maxExp.Value);
+            _player.PlayerConditionUI.UpdateGold(_gold.ToString());
         }
     }
 
@@ -107,7 +108,7 @@ public class PlayerCondition : MonoBehaviour
                 _gold.AddValue(amount);
                 // UI 전달
                 string gold = _gold.Value.ToString("F0");
-                //_conditionUI.UpdateGold(gold);
+                if (_player.PlayerConditionUI != null) _player.PlayerConditionUI.UpdateGold(gold);
                 break;
             case ConditionType.Hp:
                 _hp.SetValue(Mathf.Min(_hp.Value + amount, _maxHp.Value));
@@ -136,6 +137,8 @@ public class PlayerCondition : MonoBehaviour
                 break;
             case ConditionType.Gold:
                 _gold.SubVale(amount);
+                string gold = _gold.Value.ToString("F0");
+                if (_player.PlayerConditionUI != null) _player.PlayerConditionUI.UpdateGold(gold);
                 break;
             case ConditionType.Hp:
                 _hp.SetValue(Mathf.Max(0f, _hp.Value - amount));
