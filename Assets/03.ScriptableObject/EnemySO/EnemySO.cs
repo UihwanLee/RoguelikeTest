@@ -9,6 +9,13 @@ public class AttackInfo
     [field: SerializeField][field:Range(0f, 5f)] public float AttackCoolTime { get; private set; }
 }
 
+[Serializable]
+public class RewardInfo
+{
+    [field: SerializeField] public float GainExp { get; private set; }
+    [field: SerializeField] public GameObject GoldPrefab { get; private set; }
+}
+
 [CreateAssetMenu(fileName = "NewEnemy", menuName = "Enemy/BaseEnemy")]
 public class EnemySO : ScriptableObject
 {
@@ -27,4 +34,7 @@ public class EnemySO : ScriptableObject
     [field: SerializeField] public Sprite SpawnIcon { get; private set; }
     [field: SerializeField] public float MinSpawnDuration { get; private set; }
     [field: SerializeField] public float MaxSpawnDuration { get; private set; }
+
+    [field: Header("RewardInfo")]
+    [field: SerializeField] public RewardInfo RewardInfo { get; private set; }
 }

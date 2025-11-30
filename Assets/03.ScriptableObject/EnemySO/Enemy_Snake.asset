@@ -25,3 +25,6 @@ MonoBehaviour:
   <SpawnIcon>k__BackingField: {fileID: 21300000, guid: a7634cf23de246c4fa528f84f01881e5, type: 3}
   <MinSpawnDuration>k__BackingField: 0.5
   <MaxSpawnDuration>k__BackingField: 2
+  <RewardInfo>k__BackingField:
+    <GainExp>k__BackingField: 10
+    <GoldPrefab>k__BackingField: {fileID: 593149677957078948, guid: 86d3c1a95cf76e342898b0a50dfe410d, type: 3}

@@ -21,3 +21,6 @@ MonoBehaviour:
   <KnockbackPower>k__BackingField: 0
   <BaseSpeed>k__BackingField: 4
   <SpeedIncreasScaling>k__BackingField: 1
+  <FlashDamageCount>k__BackingField: 5
+  <InvincibilitySpeedMulitplier>k__BackingField: 0.2
+  <InvincibilityDuration>k__BackingField: 1

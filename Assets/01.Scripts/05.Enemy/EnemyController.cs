@@ -23,8 +23,6 @@ public class EnemyController : MonoBehaviour
         SetBehavior();
 
         // Target 지정
-        if (GameManager.Instance == null) ("매니저가 없음").EditorLog();
-        if (GameManager.Instance.Player == null) "플레이어가 없음".EditorLog();
         _target = GameManager.Instance.Player.transform;
     }
 
@@ -77,7 +75,7 @@ public class EnemyController : MonoBehaviour
 
         // 플레이어 공격
         Player player = _target.GetComponent<Player>();
-        player.Condition.TakeDamage(this.transform, _enemy.Condition.Atk);
+        player.Condition.TakeDamage(this.transform, _enemy.Condition.Atk, Color.red);
         _isCanAttack = false;
 
         return NodeState.SUCCESS;

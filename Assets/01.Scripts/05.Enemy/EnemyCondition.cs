@@ -41,6 +41,12 @@ public class EnemyCondition : MonoBehaviour
         IsDead = false;
     }
 
+    public void Initialize()
+    {
+        IsDead = false;
+        _hp.SetValue(_maxHp.Value);
+    }
+
     public void AddCondition(ConditionType tpye, float amount)
     {
         switch (tpye)
@@ -90,7 +96,6 @@ public class EnemyCondition : MonoBehaviour
 
                     if (_hp.Value == 0)
                     {
-                        IsDead = true;
                         OnDie();
                     }
                 }
@@ -135,6 +140,9 @@ public class EnemyCondition : MonoBehaviour
 
     public void TakeDamage(Transform other, float knockbackPower, float damage, Color? color = null)
     {
+        // 이미 죽은 상태면 Return
+        if (IsDead) return;
+
         // Damage Text 표시
         _enemy.FloatingTextPoolManager.SpawnText(TextType.Damage, damage.ToString(), this.transform, color);
 
@@ -177,6 +185,15 @@ public class EnemyCondition : MonoBehaviour
 
     public virtual void OnDie()
     {
+        IsDead = true;
+
+        // 드롭 아이템 떨구기
+        GoldSpawnManager.Instance.SpawnGold(transform.position);
+
+        // 경험치 주기
+        float gainExp = _enemy.Data.RewardInfo.GainExp;
+        GameManager.Instance.Player.Condition.AddCondition(ConditionType.Exp, gainExp);
+
         // 반납
         _enemy.SpawnManager.Release(_enemy.Data.Name, this.gameObject);
     }

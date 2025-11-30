@@ -31,9 +31,16 @@ public class Enemy : MonoBehaviour
         FloatingTextPoolManager = FloatingTextPoolManager.Instance;
     }
 
+    public void Initialize()
+    {
+        Controller.enabled = false;
+    }
+
     public void Spawn(Vector3 randomPosition)
     {
         if (_spawnCoroutine != null) StopCoroutine(_spawnCoroutine);
+
+        Condition.IsDead = true;
 
         float spawnDuration = Random.Range(Data.MinSpawnDuration, Data.MaxSpawnDuration);
         _spawnCoroutine = StartCoroutine(SpawnCoroutine(randomPosition, spawnDuration));
@@ -44,7 +51,6 @@ public class Enemy : MonoBehaviour
         float curTime = 0f;
 
         Controller.enabled = false;
-        Condition.enabled = false;
         transform.position = randomPosition;
 
         // Sprite 교체
@@ -69,7 +75,10 @@ public class Enemy : MonoBehaviour
         color.a = 1f;
         SpriteRenderer.color = color;
         SpriteRenderer.sprite = originSprite;
+        SpriteRenderer.color = Color.white;
+
         Controller.enabled = true;
-        Condition.enabled = true;
+
+        Condition.Initialize();
     }
 }

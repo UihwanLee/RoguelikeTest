@@ -48,9 +48,9 @@ public class EnemySpawn : MonoBehaviour
         return randomPosition;
     }
 
-    public void Release()
+    public void Release(GameObject obj)
     {
-        _poolManager.ReleaseObject(Key, this.gameObject);
+        _poolManager.ReleaseObject(Key, obj);
     }
 
     public string Key { get { return _key; } }

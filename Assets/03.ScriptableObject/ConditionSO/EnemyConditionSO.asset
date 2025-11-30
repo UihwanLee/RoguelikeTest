@@ -16,7 +16,11 @@ MonoBehaviour:
   <ExpIncreaseScaling>k__BackingField: 1
   <BaseMaxHp>k__BackingField: 100
   <HpIncreaseScaling>k__BackingField: 1
-  BaseAtk: 5
+  <BaseAtk>k__BackingField: 5
   <AtkIncreasScaling>k__BackingField: 1
-  BaseSpeed: 0.5
+  <KnockbackPower>k__BackingField: 0
+  <BaseSpeed>k__BackingField: 0.5
   <SpeedIncreasScaling>k__BackingField: 1
+  <FlashDamageCount>k__BackingField: 0
+  <InvincibilitySpeedMulitplier>k__BackingField: 1
+  <InvincibilityDuration>k__BackingField: 0

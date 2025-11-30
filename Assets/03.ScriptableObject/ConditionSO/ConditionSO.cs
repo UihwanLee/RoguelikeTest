@@ -26,7 +26,7 @@ public class ConditionInfoSO : ScriptableObject
 
     [field: Header("Player")]
     [field: SerializeField] public int FlashDamageCount { get; private set; }
-    [field: SerializeField][field: Range(1f, 2f)] public float InvincibilitySpeedMulitplier { get; private set; }
+    [field: SerializeField][field: Range(0f, 1f)] public float InvincibilitySpeedMulitplier { get; private set; }
     [field: SerializeField][field: Range(0f, 5f)] public float InvincibilityDuration { get; private set; }
 
     #endregion

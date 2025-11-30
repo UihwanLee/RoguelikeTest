@@ -72,7 +72,7 @@ public class EnemySpawnManager : MonoBehaviour
         {
             if (enemySpawn.Key == key)
             {
-                enemySpawn.Release();
+                enemySpawn.Release(obj);
                 return;
             }
         }
