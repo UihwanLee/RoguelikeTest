@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bbfb3044033e9449430e9faa43e1f8, type: 3}
+  m_Name: AdvisorConditionSO
+  m_EditorClassIdentifier: 
+  <BaseMaxExp>k__BackingField: 100
+  <ExpIncreaseScaling>k__BackingField: 1
+  <BaseMaxHp>k__BackingField: 100
+  <HpIncreaseScaling>k__BackingField: 1
+  <BaseAtk>k__BackingField: 10
+  <AtkIncreasScaling>k__BackingField: 1
+  <KnockbackPower>k__BackingField: 0.1
+  <BaseSpeed>k__BackingField: 2
+  <SpeedIncreasScaling>k__BackingField: 1
