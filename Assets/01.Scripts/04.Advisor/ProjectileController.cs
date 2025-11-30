@@ -93,7 +93,6 @@ public class ProjectileController : MonoBehaviour
     private void ReleaseObject()
     {
         // PoolManager에게 반납
-        Debug.Log("반납");
         _manager.ReleaseProjectile(this.gameObject);
     }
 }

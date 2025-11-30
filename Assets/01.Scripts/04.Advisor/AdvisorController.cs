@@ -75,6 +75,9 @@ public class AdvisorController : MonoBehaviour
             // hitCollider에서 Enemy 있는지 확인
             if (hitCollider.TryGetComponent<Enemy>(out Enemy enemy))
             {
+                // Enemy 상태 확인
+                if (enemy.Condition.IsDead) return NodeState.FAILURE;
+
                 // 반경 내에 있는 몬스터들 중에서 가장 가까운 몬스터 찾기
                 float distanceSqr = (enemy.transform.position - transform.position).sqrMagnitude;
 
