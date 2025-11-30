@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    private float _moveSpeed = 4f;
     private Vector2 _curMoveInput;
 
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
 
+    private Player _player;
+
     private void Awake()
     {
+        _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
@@ -30,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         Vector3 moveDirection = transform.up * _curMoveInput.y + transform.right * _curMoveInput.x;
-        Vector3 displacement = moveDirection.normalized * _moveSpeed * Time.fixedDeltaTime;
+        Vector3 displacement = moveDirection.normalized * _player.Condition.Speed * Time.fixedDeltaTime;
         transform.position += displacement;
     }
 
